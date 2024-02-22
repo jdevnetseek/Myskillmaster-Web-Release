@@ -1,0 +1,57 @@
+{
+  "name": "MySkillMaster",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint": "npm run lint:js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.15.1",
+    "@nuxtjs/auth": "^4.9.1",
+    "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/gtm": "^2.4.0",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "@stripe/stripe-js": "^1.46.0",
+    "core-js": "^3.9.1",
+    "dayjs": "^1.10.7",
+    "dompurify": "^2.4.1",
+    "google-libphonenumber": "^3.2.29",
+    "js-cookie": "^3.0.1",
+    "lodash": "^4.17.21",
+    "nuxt": "^2.15.7",
+    "uuid": "^9.0.0",
+    "vue-api-query": "^1.9.1",
+    "vue-cropperjs": "^4.0.0",
+    "vue-infinite-scroll": "^2.0.2",
+    "vue-slick-carousel": "^1.0.6",
+    "vue-tel-input-vuetify": "^1.5.3",
+    "vue2-datepicker": "^3.11.1",
+    "vuelidate": "^0.7.6"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^6.0.1",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/vuetify": "^1.12.1",
+    "@vue/test-utils": "^1.1.3",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.22.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-vue": "^7.7.0",
+    "jest": "^27.5.1",
+    "jest-serializer-vue": "^2.0.2",
+    "jest-transform-stub": "^2.0.0",
+    "vue-jest": "^3.0.4",
+    "vue-template-compiler": "^2.7.13"
+  },
+  "resolutions": {
+    "@nuxtjs/vuetify/**/sass": "1.32.13"
+  }
+}

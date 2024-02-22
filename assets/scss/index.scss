@@ -1,0 +1,45 @@
+/**
+ * ==================================================================================
+ * Main Sass file
+ * Collection of all stylesheets
+ * ==================================================================================
+ */
+
+@import 'abstracts/_variables';
+
+/**
+ * @vendors
+ * ============================================================
+ */
+
+@import 'vendors/_vue.scss';
+@import 'vendors/_vue2-datepicker.scss';
+@import 'vendors/_vue-slick-carousel.scss';
+
+/**
+ * @Base
+ * ============================================================
+ */
+@import 'base/_typography';
+/* Utility classes */
+@import 'base/_background';
+@import 'base/_dimension';
+
+/**
+ * @Components
+ * ============================================================
+ */
+@import 'components/style_button';
+@import 'components/style_icon';
+@import 'components/style_input';
+@import 'components/style_modal';
+@import 'components/style_input';
+@import 'components/style_textarea';
+@import 'components/style_radio';
+
+/**
+ * @Layouts
+ * ============================================================
+ */
+
+@import 'layout/style_layout';

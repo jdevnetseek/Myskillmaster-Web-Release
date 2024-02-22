@@ -1,0 +1,28 @@
+.bg {
+  &__default {
+    background-color: $bg-page !important;
+  }
+
+  &__primary {
+    background-color: $primary !important;
+    &--shade-1 {
+      background-color: $primary-s1 !important;
+    }
+    &--shade-2 {
+      background-color: $primary-s2 !important;
+    }
+  }
+  &__secondary {
+    background-color: $secondary !important;
+  }
+
+  &__warning {
+    background-color: $alert-warning !important;
+  }
+  &__success {
+    background-color: $alert-success !important;
+  }
+  &__error {
+    background-color: $alert-error !important;
+  }
+}

@@ -1,0 +1,104 @@
+/**
+ * ==================================================================================
+ * Sass Mixins
+ * ==================================================================================
+ */
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -ms-transform: $property;
+  -o-transform: $property;
+  transform: $property;
+}
+
+@mixin transform-style($property) {
+  -webkit-transform-style: $property;
+  -moz-transform-style: $property;
+  -ms-transform-style: $property;
+  -o-transform-style: $property;
+  transform-style: $property;
+}
+
+@mixin transition($property) {
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -ms-transition: $property;
+  -o-transition: $property;
+  transition: $property;
+}
+
+@mixin animation($property) {
+  -webkit-animation: $property;
+  -moz-animation: $property;
+  -ms-animation: $property;
+  -o-animation: $property;
+  animation: $property;
+}
+
+@mixin animation-delay($property) {
+  -webkit-animation-delay: $property;
+  -moz-animation-delay: $property;
+  -o-animation-delay: $property;
+  animation-delay: $property;
+}
+
+@mixin border-radius($property) {
+  -webkit-border-radius: $property;
+  border-radius: $property;
+}
+
+@mixin select($property) {
+  -webkit-touch-callout: $property;
+  -webkit-user-select: $property;
+  -khtml-user-select: $property;
+  -moz-user-select: $property;
+  -ms-user-select: $property;
+  user-select: $property;
+}
+
+@mixin box-shadow($property) {
+  -webkit-box-shadow: $property;
+  box-shadow: $property;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin text-style($font-size: 10px, $line-height: 12px, $font-weight: 400) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
+@mixin dimension-radius(
+  $top-left: 0,
+  $top-right: 0,
+  $bottom-right: 0,
+  $bottom-left: 0
+) {
+  border-radius: $top-left $top-right $bottom-right $bottom-left;
+}
+
+@mixin wrap-text-ellipsis($line, $line-height: 22px) {
+  display: -webkit-box;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line; /* number of lines to show */
+  line-height: $line-height; /* fallback */
+  max-height: $line-height * $line; /* fallback */
+}

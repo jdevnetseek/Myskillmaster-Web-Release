@@ -1,0 +1,92 @@
+.layout {
+  .v-text-field {
+    border-radius: $border-radius;
+
+    .v-input__control {
+      .v-input__slot,
+      .v-select__slot {
+        fieldset {
+          color: $border-color !important;
+        }
+      }
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+      .v-input__control {
+        .v-input__slot {
+          fieldset {
+            color: $primary !important;
+          }
+        }
+      }
+    }
+
+    &.error--text {
+      .v-input__slot,
+      .v-select__slot {
+        fieldset {
+          color: $alert-error !important;
+        }
+      }
+    }
+
+    &--solo-flat:not(.v-text-field--outlined) {
+      .v-input__control {
+        .v-input__slot {
+          border: 1px solid $border-color;
+          background: #ffffff !important;
+          @include transition(all 0.25s);
+        }
+      }
+
+      &:active,
+      &:focus,
+      &:focus-within {
+        .v-input__control {
+          .v-input__slot {
+            border-color: $regular-text;
+          }
+        }
+      }
+
+      .v-input__control {
+        .v-input__slot,
+        .v-select__slot {
+          &::before,
+          &::after {
+            display: none;
+          }
+
+          .v-label {
+            color: $primary-s3 !important;
+          }
+
+          .v-text-field__slot {
+            input {
+              caret-color: $regular-text;
+            }
+          }
+        }
+      }
+
+      &.error--text {
+        .v-input__control {
+          .v-input__slot {
+            border-width: 2px;
+            border-color: $alert-error;
+          }
+        }
+      }
+    }
+
+    &--solo-flat:not(.v-text-field--outlined).v-text-field--bg-primary {
+      .v-input__control {
+        .v-input__slot {
+          background: #f2f8f8 !important;
+        }
+      }
+    }
+  }
+}

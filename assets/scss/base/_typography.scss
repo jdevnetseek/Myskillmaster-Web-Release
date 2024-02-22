@@ -1,0 +1,147 @@
+/**
+ * ==================================================================================
+ * Typography
+ * ==================================================================================
+ */
+
+@import '@/assets/scss/abstracts/_mixin';
+@import '@/assets/scss/abstracts/_placeholders';
+
+/**
+ * Fonts
+ * ============================================================
+ */
+@import '@/assets/fonts/Satoshi/stylesheet';
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/**
+ * Styling
+ * NOTE: text-style mixin: size, height, weight
+ * ============================================================
+ */
+.layout {
+  h1 {
+    @extend %h1-style;
+  }
+
+  h2 {
+    @extend %h2-style;
+  }
+
+  h3 {
+    @extend %h3-style;
+  }
+
+  h4 {
+    @extend %h4-style;
+  }
+
+  h5 {
+    @extend %h5-style;
+  }
+
+  h6 {
+    @extend %h6-style;
+  }
+
+  p,
+  a:not(.v-btn),
+  label,
+  input,
+  textarea {
+    @extend %body-style;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  caption {
+    @extend %caption-style;
+  }
+
+  button {
+    @extend %button-style;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  label,
+  caption,
+  input,
+  textarea,
+  button {
+    color: $regular-text;
+
+    /**
+     * Overwrite default vuetify typography classes
+     * (https://vuetifyjs.com/en/styles/text-and-typography/)
+     */
+    &.text {
+      &-h1 {
+        @extend %h1-style;
+      }
+      &-h2 {
+        @extend %h2-style;
+      }
+      &-h3 {
+        @extend %h3-style;
+      }
+      &-h4 {
+        @extend %h4-style;
+      }
+      &-h5 {
+        @extend %h5-style;
+      }
+      &-h6 {
+        @extend %h6-style;
+      }
+      &-subtitle,
+      &-subtitle-1 {
+        @extend %subtitle-1-style;
+      }
+      &-subtitle-2 {
+        @extend %subtitle-2-style;
+      }
+      &-body,
+      &-body-1 {
+        @extend %body-1-style;
+      }
+      &-body-2 {
+        @extend %body-2-style;
+      }
+      &-button {
+        @extend %button-style;
+      }
+      &-caption {
+        @extend %caption-style;
+      }
+    }
+  }
+
+  .font-family-lato {
+    font-family: 'Lato', sans-serif;
+  }
+
+  .font-color-regular {
+    color: $regular-text;
+  }
+
+  .font-color-secondary {
+    color: $secondary-text;
+  }
+
+  .font-color-tertiary {
+    color: $tertiary-text;
+  }
+
+  .font-color-inactive {
+    color: $inactive-text;
+  }
+}

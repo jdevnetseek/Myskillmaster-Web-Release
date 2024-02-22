@@ -1,0 +1,93 @@
+.layout {
+  @mixin buttonSize($height, $width) {
+    height: $height;
+    width: $width;
+  }
+
+  a.v-btn {
+    font-weight: 600;
+  }
+
+  .v-btn {
+    text-transform: none;
+
+    &.v-size--default {
+      min-height: 48px;
+      padding: 0 20px;
+    }
+
+    &.v-size--large {
+      min-height: 64px;
+    }
+
+    &.v-size--x-large {
+      min-height: 72px;
+    }
+
+    &.v-size--small {
+      min-height: 40px;
+    }
+
+    &.v-size--x-small {
+      .v-btn__content {
+        .v-icon,
+        .v-icon.v-icon--left,
+        .v-icon.v-icon--right {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &.v-btn--fab.v-size--default,
+    &.v-btn--icon.v-size--default {
+      @include buttonSize(50px, 50px);
+    }
+
+    &.v-btn--fab.v-size--small,
+    &.v-btn--icon.v-size--small {
+      @include buttonSize(40px, 40px);
+    }
+
+    &.v-btn--fab.v-size--x-small,
+    &.v-btn--icon.v-size--x-small {
+      @include buttonSize(26px, 26px);
+    }
+
+    &.v-btn--fab.v-size--large,
+    &.v-btn--icon.v-size--large {
+      @include buttonSize(64px, 64px);
+    }
+
+    &.v-btn--fab.v-size--x-large,
+    &.v-btn--icon.v-size--x-large {
+      @include buttonSize(72px, 72px);
+    }
+
+    &:not(.v-btn--round):not(.v-btn--rounded) {
+      border-radius: $border-radius;
+    }
+
+    &--outlined {
+      border: 1.5px solid currentColor;
+    }
+
+    &--rounded {
+      border-radius: 28px;
+    }
+
+    &--no-background {
+      &::before,
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    &__content {
+      .v-icon,
+      .v-icon.v-icon--left,
+      .v-icon.v-icon--right {
+        font-size: 24px;
+      }
+    }
+  }
+}

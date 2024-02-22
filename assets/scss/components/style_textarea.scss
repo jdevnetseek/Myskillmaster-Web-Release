@@ -1,0 +1,30 @@
+.layout {
+  .v-textarea {
+    .v-input__control {
+      .v-input__slot {
+        .v-text-field__slot {
+          padding-bottom: 25px;
+
+          textarea {
+            line-height: 1.5rem;
+
+            &::placeholder {
+              color: $primary-s3;
+            }
+          }
+        }
+      }
+
+      .v-text-field__details {
+        height: 0;
+
+        .v-counter {
+          position: absolute;
+          bottom: 40px;
+          right: 15px;
+          color: $primary-s3;
+        }
+      }
+    }
+  }
+}

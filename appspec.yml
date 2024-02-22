@@ -1,0 +1,28 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/web
+file_exists_behavior: OVERWRITE
+hooks:
+  AfterInstall:
+    - location: codedeploy/scripts/install_vhost.sh
+      timeout: 30
+      runas: root
+#    - location: codedeploy/scripts/install_env.sh
+#      timeout: 30
+#      runas: root
+    - location: codedeploy/scripts/change_permissions.sh
+      timeout: 30
+      runas: root
+#    - location: codedeploy/scripts/deployment_hooks.sh
+#      timeout: 330
+#      runas: root
+  ApplicationStart:
+    - location: codedeploy/scripts/start_server.sh
+      timeout: 60
+      runas: root
+  ApplicationStop:
+    - location: codedeploy/scripts/stop_server.sh
+      timeout: 60
+      runas: root

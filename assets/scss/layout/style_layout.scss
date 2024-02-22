@@ -1,0 +1,47 @@
+/**
+ * NOTE: Vuetify has the scrollbar seen by default
+ * (https://github.com/vuetifyjs/vuetify/issues/1197)
+ */
+html {
+  overflow-y: auto !important;
+}
+
+$headerExtraPadding: 20px;
+.layout {
+  &__main {
+    &__border {
+      position: relative;
+      min-height: 100vh;
+    }
+  }
+
+  &--header-padding {
+    // Padding for header + padding
+    padding-top: calc(#{$header-height} + #{$headerExtraPadding});
+
+    &-exact {
+      padding-top: calc(#{$header-height});
+    }
+  }
+
+  &--padding-bottom {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: map-get($grid-breakpoints, 'md')) {
+  .layout {
+    &__main {
+      &__border {
+      }
+    }
+
+    &--header-padding {
+      padding-top: calc(#{$header-mobile-height} + #{$headerExtraPadding});
+
+      &-exact {
+        padding-top: calc(#{$header-mobile-height});
+      }
+    }
+  }
+}

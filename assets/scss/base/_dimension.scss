@@ -1,0 +1,9 @@
+.screen-border {
+  width: 95%;
+  margin: 0 2.5%;
+
+  @media (max-width: map-get($grid-breakpoints, 'md')) {
+    width: 90%;
+    margin: 0 5%;
+  }
+}

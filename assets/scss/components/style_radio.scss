@@ -1,0 +1,15 @@
+.layout {
+  .v-input--radio-group {
+    .v-input__control {
+      .v-input__slot {
+        .v-input--radio-group__input {
+          .v-radio {
+            label {
+              color: $regular-text;
+            }
+          }
+        }
+      }
+    }
+  }
+}

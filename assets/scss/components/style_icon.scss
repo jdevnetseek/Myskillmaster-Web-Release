@@ -1,0 +1,21 @@
+.layout {
+  .v-icon {
+    &--no-background {
+      &::after,
+      &::before,
+      &:hover {
+        background-color: transparent !important;
+      }
+    }
+
+    .v-icon--custom {
+      path {
+        stroke: currentColor;
+      }
+
+      .background {
+        stroke: transparent !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.layout {
+  .v-dialog {
+    > .v-card {
+      > .v-card__title {
+        padding-top: 30px;
+      }
+
+      > .v-card__text {
+        padding-bottom: 30px;
+      }
+    }
+  }
+}

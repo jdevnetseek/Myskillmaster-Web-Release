@@ -1,0 +1,48 @@
+/**
+ * ==================================================================================
+ * Sass Placeholders
+ * ==================================================================================
+ */
+
+/**
+ * Font
+ * ============================================================
+ */
+%h1-style {
+  @include text-style(48px, 56px, 700);
+}
+%h2-style {
+  @include text-style(40px, 48px, 700);
+}
+%h3-style {
+  @include text-style(32px, 40px, 700);
+}
+%h4-style {
+  @include text-style(28px, 34px, 700);
+}
+%h5-style {
+  @include text-style(22px, 28px, 700);
+}
+%h6-style {
+  @include text-style(16px, 22px, 700);
+}
+%subtitle-style,
+%subtitle-1-style {
+  @include text-style(16px, 22px, 500);
+}
+%subtitle-2-style {
+  @include text-style(14px, 20px, 500);
+}
+%body-style,
+%body-1-style {
+  @include text-style(16px, 22px, 400);
+}
+%body-2-style {
+  @include text-style(14px, 20px, 400);
+}
+%button-style {
+  @include text-style(16px, 22px, 700);
+}
+%caption-style {
+  @include text-style(12px, 18px, 400);
+}
