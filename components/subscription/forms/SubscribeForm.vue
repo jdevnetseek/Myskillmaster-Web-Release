@@ -2,7 +2,7 @@
   <div class="subscribe-form">
     <div class="subscribe-form">
       <h4 class="subscribe-form__header">
-        Enter payment details
+        Enter payment details 
       </h4>
     </div>
     <div class="subscribe-form__fields">

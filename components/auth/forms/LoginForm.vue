@@ -126,9 +126,11 @@ export default {
     async submit() {
       this.$v.$touch()
       this.form.$clearErrors()
+      console.log('asd')
 
       if (!this.form.$busy && !this.isLoggedIn && !this.$v.$invalid) {
         await this.$store.dispatch('user/login', this.form.$data())
+        // await axios.post('http://127.0.0.1:8000/auth/login', this.form.$data())
           .then(() => {
             if (!this.form.$hasErrors()) {
               this.reset()

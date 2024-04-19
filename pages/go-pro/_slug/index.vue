@@ -1,7 +1,7 @@
 <template>
   <div class="go-pro-subscribe-page screen-border">
     <template v-if="hasPlan">
-      <SubscribeForm :plan="plan" />
+      <SubscribeForm :plan="plan" /> 
     </template>
   </div>
 </template>
