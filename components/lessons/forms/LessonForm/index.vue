@@ -280,8 +280,9 @@
  **/
 
 import { mapState, mapGetters } from 'vuex'
-import { hasError, validationMixin } from '@/validations'
 import { get } from 'lodash'
+import LessonScheduleList from './fields/LessonScheduleList'
+import { hasError, validationMixin } from '@/validations'
 import { parseToFormData } from '@/utils/Helpers'
 import { lessonForm } from '@/validations/lesson/lesson'
 import { REMOTE_OPTIONS } from '@/utils/enums/RemoteOption'
@@ -290,7 +291,6 @@ import SelectCategory from '@/components/fields/SelectCategory'
 import LessonFileUpload from '@/components/lessons/forms/LessonFileUpload'
 import SnackbarMixin from '@/utils/mixins/Snackbar'
 import ConfirmationModal from '@/components/modals/ConfirmationModal'
-import LessonScheduleList from './fields/LessonScheduleList'
 
 export default {
   components: {

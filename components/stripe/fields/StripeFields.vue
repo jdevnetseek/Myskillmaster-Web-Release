@@ -40,10 +40,10 @@
  **/
 
 import { loadStripe } from '@stripe/stripe-js'
+import StripeTextfield from './StripeTextfield'
 import State from '@/utils/rawStates/State'
 import ENV from '@/services/env'
 import SnackbarMixin from '@/utils/mixins/Snackbar'
-import StripeTextfield from './StripeTextfield'
 
 export default {
   components: {

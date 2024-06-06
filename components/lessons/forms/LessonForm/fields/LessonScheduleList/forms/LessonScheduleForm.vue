@@ -203,6 +203,9 @@ export default {
 
   data() {
     return {
+      start_date: '',
+      end_date: '',
+      time: '',
       dows: [
         {
           text: 'All',
@@ -306,6 +309,10 @@ export default {
 
   methods: {
     updateSchedule() {
+      // this.scheduleForm.date = '2024-04-27' // Sample date in "YYYY-MM-DD" format
+      // this.scheduleForm.time = '12:30 PM' // Sample time input
+      // this.durationHours = 1 // Sample duration in hours
+      // this.scheduleForm.end_date = '2024-04-29' // Sample end date in "YYYY-MM-DD" format
       if (this.scheduleForm.date && this.scheduleForm.time) {
         const time = DATE.convert(this.scheduleForm.time)
         const timeOut = time.add(this.durationHours, 'hours')
@@ -490,6 +497,13 @@ export default {
         period: this.scheduleForm.period
       }
     }
+  },
+
+  updated() {
+    this.scheduleForm.date = '2024-04-29'
+    this.scheduleForm.end_date = '2024-05-10'
+    // this.scheduleForm.time = '12:30 PM'
+    this.scheduleForm.time = '4'
   },
 
   validations() {

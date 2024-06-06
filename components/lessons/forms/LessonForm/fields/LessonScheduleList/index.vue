@@ -42,10 +42,10 @@
  **/
 
 import { mapState, mapGetters } from 'vuex'
-import ErrorMessage from '@/components/fields/ErrorMessage'
-import SnackbarMixin from '@/utils/mixins/Snackbar'
 import LessonScheduleItem from './fields/LessonScheduleItem'
 import LessonScheduleForm from './forms/LessonScheduleForm'
+import SnackbarMixin from '@/utils/mixins/Snackbar'
+import ErrorMessage from '@/components/fields/ErrorMessage'
 
 export default {
   components: {
@@ -97,6 +97,7 @@ export default {
 
   mounted() {
     this.init()
+    console.log(this.form.lesson_schedules)
   },
 
   methods: {
