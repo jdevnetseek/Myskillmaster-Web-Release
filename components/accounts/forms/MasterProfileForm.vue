@@ -152,12 +152,12 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex'
+import PortfolioFileUpload from '../components/PortfolioFileUpload.vue'
 import { parseToFormData } from '@/utils/Helpers'
 import { hasError, validationMixin } from '@/validations'
 import { masterProfileForm } from '@/validations/auth/masterProfile'
 import SnackbarMixin from '@/utils/mixins/Snackbar'
 import ConfirmationModal from '@/components/modals/ConfirmationModal'
-import PortfolioFileUpload from '../components/PortfolioFileUpload.vue'
 
 export default {
   components: { PortfolioFileUpload, ConfirmationModal },
@@ -270,14 +270,18 @@ export default {
                 this.showSnackbar(
                   'Your Master Profile info has been saved successfully!'
                 )
-
                 if (this.redirect) {
                   this.$router.push({
-                    name: this.redirect,
-                    params: this.redirectParams,
-                    query: this.redirectQuery
+                    name: 'add-a-lesson-create'
                   })
                 }
+                // if (this.redirect) {
+                //   this.$router.push({
+                //     name: this.redirect,
+                //     params: this.redirectParams,
+                //     query: this.redirectQuery
+                //   })
+                // }
               } else {
                 this.showSnackbar(this.form.$errorMessage, false)
               }

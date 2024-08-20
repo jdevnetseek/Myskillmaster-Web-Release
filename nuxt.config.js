@@ -70,7 +70,7 @@ export default {
   env: {
     appName,
     apiUrl: process.env.VUE_APP_API_URL,
-    baseUrl: process.env.BASE_URL || 'localhost:8000/api/',
+    baseUrl: process.env.BASE_URL || 'localhost:3000',
     isDev: process.env.NODE_ENV !== 'production',
     googlePlacesApiKey: process.env.VUE_APP_GOOGLE_PLACES_API_KEY || '',
     stripePublishableKey: process.env.VUE_APP_STRIPE_PUBLISHABLE_KEY || ''

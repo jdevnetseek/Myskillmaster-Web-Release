@@ -89,13 +89,10 @@ export default {
           title: 'Past lessons',
           action: () => this.goToPage('past-lessons')
         },
-        {
-          title: this.user.is_subscribed ? 'Subscription Tier' : 'Go Pro',
-          action: () =>
-            this.goToPage(
-              this.user.is_subscribed ? 'subscription-tier' : 'go-pro'
-            )
-        },
+        /** 
+         * slug - subscription-tier
+         * slug - go-pro
+         */
         {
           title: 'Accounts',
           action: () => this.goToPage('settings')

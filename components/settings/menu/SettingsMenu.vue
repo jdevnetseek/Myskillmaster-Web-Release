@@ -40,10 +40,10 @@ export default {
           title: 'Master profile',
           link: 'settings-master-profile'
         },
-        {
-          title: 'Payment details',
-          link: 'settings-payment-details'
-        },
+        // {
+        //   title: 'Payment details',
+        //   link: 'settings-payment-details'
+        // },
         {
           title: 'Payout details',
           link: 'settings-payout-details'

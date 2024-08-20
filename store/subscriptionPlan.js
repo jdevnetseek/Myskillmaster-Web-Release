@@ -1,5 +1,5 @@
-import State from '@/utils/rawStates/State'
 import { isEmpty } from 'lodash'
+import State from '@/utils/rawStates/State'
 import { getErrorResponse } from '@/utils/Helpers'
 import SubscriptionPlan from '@/models/SubscriptionPlan'
 
@@ -54,6 +54,9 @@ export const actions = {
       commit('clearList')
 
       const { data } = await this.$axios.get('user/plans')
+      if (data.data.result === true) {
+        return
+      }
       commit('setList', data.data)
     } catch (error) {
       commit('setFormErrors', { form: 'listing', response: error })

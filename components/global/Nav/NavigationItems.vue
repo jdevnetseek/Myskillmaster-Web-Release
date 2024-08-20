@@ -167,10 +167,10 @@ export default {
               title: 'Master profile',
               action: () => this.goToPage('settings-master-profile')
             },
-            {
-              title: 'Payment details',
-              action: () => this.goToPage('settings-payment-details')
-            },
+            // {
+            //   title: 'Payment details',
+            //   action: () => this.goToPage('settings-payment-details')
+            // },
             {
               title: 'Payout details',
               action: () => this.goToPage('settings-payout-details')
